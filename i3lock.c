@@ -669,12 +669,22 @@ static void handle_key_press(xcb_key_press_event_t *event) {
             case XKB_KEY_XF86AudioPlay:
             case XKB_KEY_XF86AudioPause:
             case XKB_KEY_XF86AudioStop:
+                system("awesome-client 'require(\"beautiful\").player.toggle()'");
+                return;
             case XKB_KEY_XF86AudioPrev:
+                system("awesome-client 'require(\"beautiful\").player.prev()'");
+                return;
             case XKB_KEY_XF86AudioNext:
+                system("awesome-client 'require(\"beautiful\").player.next()'");
+                return;
             case XKB_KEY_XF86AudioMute:
+                system("awesome-client 'require(\"beautiful\").volume.toggle()'");
+                return;
             case XKB_KEY_XF86AudioLowerVolume:
+                system("awesome-client 'require(\"beautiful\").volume.lower()'");
+                return;
             case XKB_KEY_XF86AudioRaiseVolume:
-                xcb_send_event(conn, true, screen->root, XCB_EVENT_MASK_BUTTON_PRESS, (char *)event);
+                system("awesome-client 'require(\"beautiful\").volume.raise()'");
                 return;
         }
     }
