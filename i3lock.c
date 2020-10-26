@@ -564,7 +564,7 @@ static void input_done(void) {
         else if (strcmp(mod_name, XKB_MOD_NAME_ALT) == 0)
             mod_name = "Alt";
         else if (strcmp(mod_name, XKB_MOD_NAME_NUM) == 0)
-            mod_name = "Num Lock";
+            mod_name = "";
         else if (strcmp(mod_name, XKB_MOD_NAME_LOGO) == 0)
             mod_name = "Super";
 
